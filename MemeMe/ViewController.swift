@@ -191,6 +191,11 @@ UINavigationControllerDelegate ,UITextFieldDelegate
         //Create the meme
         let meme = Meme( topText: topText.text!, bottomText : bottomText.text! ,image:
             imagePickedView.image, memedImage: memedImage)
+        
+        let object = UIApplication.shared.delegate
+        let appDelegate = object as! AppDelegate
+        appDelegate.memes.append(meme)
+        
     }
     
     

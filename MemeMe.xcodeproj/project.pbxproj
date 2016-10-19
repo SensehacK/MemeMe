@@ -14,6 +14,9 @@
 		FB1E8FE51DA7652800E567A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB1E8FE31DA7652800E567A7 /* LaunchScreen.storyboard */; };
 		FB1E8FF01DA7652800E567A7 /* MemeMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1E8FEF1DA7652800E567A7 /* MemeMeTests.swift */; };
 		FB1E8FFB1DA7652800E567A7 /* MemeMeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1E8FFA1DA7652800E567A7 /* MemeMeUITests.swift */; };
+		FBB9AD8C1DB7C1A1002D2121 /* CustomMemeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB9AD8B1DB7C1A1002D2121 /* CustomMemeCell.swift */; };
+		FBC2E3961DB7429100EFADB3 /* MemeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC2E3951DB7429100EFADB3 /* MemeCollectionViewController.swift */; };
+		FBC2E3981DB7433C00EFADB3 /* MemeSentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC2E3971DB7433C00EFADB3 /* MemeSentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		FB1E8FF61DA7652800E567A7 /* MemeMeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MemeMeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB1E8FFA1DA7652800E567A7 /* MemeMeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeMeUITests.swift; sourceTree = "<group>"; };
 		FB1E8FFC1DA7652800E567A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FBB9AD8B1DB7C1A1002D2121 /* CustomMemeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomMemeCell.swift; sourceTree = "<group>"; };
+		FBC2E3951DB7429100EFADB3 /* MemeCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeCollectionViewController.swift; sourceTree = "<group>"; };
+		FBC2E3971DB7433C00EFADB3 /* MemeSentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeSentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +105,10 @@
 			children = (
 				FB1E8FDA1DA7652800E567A7 /* AppDelegate.swift */,
 				FB1E8FDC1DA7652800E567A7 /* ViewController.swift */,
+				FBC2E3951DB7429100EFADB3 /* MemeCollectionViewController.swift */,
+				FBC2E3971DB7433C00EFADB3 /* MemeSentViewController.swift */,
 				FB1E8FDE1DA7652800E567A7 /* Main.storyboard */,
+				FBB9AD8B1DB7C1A1002D2121 /* CustomMemeCell.swift */,
 				FB1E8FE11DA7652800E567A7 /* Assets.xcassets */,
 				FB1E8FE31DA7652800E567A7 /* LaunchScreen.storyboard */,
 				FB1E8FE61DA7652800E567A7 /* Info.plist */,
@@ -259,7 +268,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBC2E3981DB7433C00EFADB3 /* MemeSentViewController.swift in Sources */,
 				FB1E8FDD1DA7652800E567A7 /* ViewController.swift in Sources */,
+				FBB9AD8C1DB7C1A1002D2121 /* CustomMemeCell.swift in Sources */,
+				FBC2E3961DB7429100EFADB3 /* MemeCollectionViewController.swift in Sources */,
 				FB1E8FDB1DA7652800E567A7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -503,6 +515,7 @@
 				FB1E90011DA7652800E567A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FB1E90021DA7652800E567A7 /* Build configuration list for PBXNativeTarget "MemeMeTests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +524,7 @@
 				FB1E90041DA7652800E567A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FB1E90051DA7652800E567A7 /* Build configuration list for PBXNativeTarget "MemeMeUITests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +533,7 @@
 				FB1E90071DA7652800E567A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
