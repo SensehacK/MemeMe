@@ -40,14 +40,9 @@ class MemeCollectionViewController : UICollectionViewController {
         
         let meme = memes[indexPath.row]
         
-        
-        //cell.setText(meme.top, bottomString: meme.bottom)
-        
-        
         cell.topLabelCollection.text = meme.topText
         cell.bottomLabelCollection.text = meme.bottomText
-        
-        cell.collectionImageView?.image = meme.memedImage
+        cell.collectionImageView.image = meme.memedImage
         
         //error with cell return expression convert
         return cell

@@ -33,12 +33,9 @@ class MemeSentViewController : UIViewController, UITableViewDataSource, UITableV
         let meme = self.memes[indexPath.row]
         
         // Set the name and image
-        cell.textLabel?.text = meme.topText
-        cell.imageView?.image = meme.memedImage
-        
-        
+        cell.memeListTitle.text = meme.topText
+        cell.memeListDetail.text = meme.bottomText
         return cell
-
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
