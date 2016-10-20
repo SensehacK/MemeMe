@@ -9,8 +9,9 @@
 import Foundation
 import  UIKit
 
-class MemeSentViewController : UIViewController, UITableViewDataSource, UITableViewDelegate {
+class MemeSentViewController : UIViewController , UITableViewDelegate,UITableViewDataSource{
     
+    @IBOutlet weak var memeTableView: UITableView!
    
     
     var memes: [Meme] {
@@ -23,12 +24,19 @@ class MemeSentViewController : UIViewController, UITableViewDataSource, UITableV
         
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func viewWillAppear(_ animated: Bool) {
+       
+      memeTableView.reloadData()
+    }
+    
+    
+    
+     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.memes.count
     }
     
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MemeListCell" , for : indexPath) as! SentMemeListViewController
         let meme = self.memes[indexPath.row]
         
@@ -38,17 +46,17 @@ class MemeSentViewController : UIViewController, UITableViewDataSource, UITableV
         return cell
     }
     
+    
+    
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let detailController = self.storyboard!.instantiateViewController(withIdentifier: "MemeViewController") as! ViewController
-        detailController.memesArr = self.memes[indexPath.row]
+        let detailController = self.storyboard!.instantiateViewController(withIdentifier: "MemeDetailViewController") as! MemeDetailViewController
+        detailController.memeDetail = self.memes[indexPath.row]
         self.navigationController!.pushViewController(detailController, animated: true)
         
     }
     
-    
-    
-    
-    
-    
+
+
 }

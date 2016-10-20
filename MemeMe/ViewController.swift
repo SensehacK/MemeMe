@@ -77,6 +77,7 @@ UINavigationControllerDelegate ,UITextFieldDelegate
         bottomText.text = "Bottom text test" // placeholder
         topText.textAlignment = .center
         bottomText.textAlignment = .center
+        
     }
 
     override func viewWillDisappear(_ animated: Bool)
@@ -200,7 +201,7 @@ UINavigationControllerDelegate ,UITextFieldDelegate
         let object = UIApplication.shared.delegate
         let appDelegate = object as! AppDelegate
         appDelegate.memes.append(meme)
-        
+        print(meme.topText)
     }
     
     

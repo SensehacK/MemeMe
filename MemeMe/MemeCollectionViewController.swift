@@ -11,22 +11,18 @@ import  UIKit
 
 class MemeCollectionViewController : UICollectionViewController {
     
-    @IBOutlet weak var topLabelCollection: UILabel!
-    
-  //  @IBOutlet weak var topLabelCollection2: UILabel!
-    @IBOutlet weak var bottomLabelCollection: UILabel!
-    
-    @IBOutlet weak var collectionImageView: UIImageView!
-    var memes2 : [Meme]!
-    
     var memes: [Meme] {
         return (UIApplication.shared.delegate as! AppDelegate).memes
     }
     
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        collectionView?.reloadData()
         
     }
     
@@ -49,20 +45,22 @@ class MemeCollectionViewController : UICollectionViewController {
         
         
     }
-        
+    
+    
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         // Grab the DetailVC from Storyboard
-        let object: AnyObject = self.storyboard!.instantiateViewController(withIdentifier: "MemeViewController")
-        let detailVC = object as! ViewController
+        let object: AnyObject = self.storyboard!.instantiateViewController(withIdentifier: "MemeDetailViewController")
+        let detailVC = object as! MemeDetailViewController
         
         //Populate view controller with data from the selected item
-        detailVC.memesArr = self.memes[indexPath.row]
+        detailVC.memeDetail  = self.memes[indexPath.row]
         
         // Present the view controller using navigation
         navigationController!.pushViewController(detailVC, animated: true)
     }
     
+ 
     
     
     
