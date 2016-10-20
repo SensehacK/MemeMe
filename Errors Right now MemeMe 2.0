@@ -1,0 +1,9 @@
+Errors Right now MemeMe 2.0
+
+/Users/SensehacK/Desktop/Xcode/Projects/MemeMe-1/MemeMe/MemeCollectionViewController.swift:53:16: Cannot convert return expression of type 'MemeCollectionViewController' to return type 'UICollectionViewCell'
+
+/Users/SensehacK/Desktop/Xcode/Projects/MemeMe-1/MemeMe/MemeCollectionViewController.swift:38:109: Cast from 'UICollectionViewCell' to unrelated type 'MemeCollectionViewController' always fails
+
+file:///Users/SensehacK/Desktop/Xcode/Projects/MemeMe-1/MemeMe/Base.lproj/Main.storyboard: error: Illegal Configuration: The topLabelCollection outlet from the MemeCollectionViewController to the UILabel is invalid. Outlets cannot be connected to repeating content.
+
+/Users/SensehacK/Desktop/Xcode/Projects/MemeMe-1/MemeMe/ViewController.swift:192:13: Initialization of immutable value 'meme' was never used; consider replacing with assignment to '_' or removing it
