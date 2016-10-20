@@ -37,7 +37,7 @@ class MemeCollectionViewController : UICollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CustomMemeCell", for: indexPath)as! MemeCollectionViewController
         
         
-        let meme = memes[indexPath.item]
+        let meme = memes[indexPath.row]
         
         
         //cell.setText(meme.top, bottomString: meme.bottom)
@@ -48,10 +48,25 @@ class MemeCollectionViewController : UICollectionViewController {
         
         cell.collectionImageView?.image = meme.memedImage
         
+        //error with cell return expression convert
         return cell
         
         
     }
+        
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        // Grab the DetailVC from Storyboard
+        let object: AnyObject = self.storyboard!.instantiateViewController(withIdentifier: "MemeViewController")
+        let detailVC = object as! ViewController
+        
+        //Populate view controller with data from the selected item
+        detailVC.memesArr = self.memes[indexPath.row]
+        
+        // Present the view controller using navigation
+        navigationController!.pushViewController(detailVC, animated: true)
+    }
+    
     
     
     
