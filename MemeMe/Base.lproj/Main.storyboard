@@ -197,16 +197,7 @@
                                             <action selector="pickImage:" destination="BYZ-38-t0r" id="21B-gf-8JM"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem style="plain" id="hTs-s6-hIA">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="JWa-6d-g3N">
-                                            <rect key="frame" x="93" y="10" width="83" height="25"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" image="camera"/>
-                                            <connections>
-                                                <action selector="pickImageCamera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xZT-yN-tpj"/>
-                                            </connections>
-                                        </button>
-                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="camera" id="hTs-s6-hIA"/>
                                 </items>
                             </toolbar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bZm-f3-uLS"/>
@@ -283,7 +274,6 @@
                     </view>
                     <connections>
                         <outlet property="bottomText" destination="5sP-ZH-2JH" id="aY7-he-egy"/>
-                        <outlet property="cameraButton" destination="JWa-6d-g3N" id="6Rk-H8-TFE"/>
                         <outlet property="cancelButton" destination="5td-I4-RQS" id="oJy-du-gUu"/>
                         <outlet property="imagePickedView" destination="bZm-f3-uLS" id="rcP-nG-Dcy"/>
                         <outlet property="navigationBar" destination="1sc-IZ-GdH" id="jpo-Ss-lce"/>
@@ -314,7 +304,4 @@
             <point key="canvasLocation" x="-507" y="-177"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="camera" width="25" height="25"/>
-    </resources>
 </document>
