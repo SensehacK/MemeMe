@@ -11,9 +11,10 @@ import  UIKit
 
 class MemeCollectionViewController : UICollectionViewController {
     
-    @IBOutlet weak var topLabel: UILabel!
+    @IBOutlet weak var topLabelCollection: UILabel!
     
-    @IBOutlet weak var bottomLabel: UILabel!
+  //  @IBOutlet weak var topLabelCollection2: UILabel!
+    @IBOutlet weak var bottomLabelCollection: UILabel!
     
     @IBOutlet weak var collectionImageView: UIImageView!
     var memes2 : [Meme]!

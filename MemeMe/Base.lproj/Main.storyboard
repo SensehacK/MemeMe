@@ -12,7 +12,7 @@
             <objects>
                 <navigationController id="90X-q9-60f" userLabel="Meme Collection" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="wxa-Bf-h8V"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="HSx-WJ-dYc">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HSx-WJ-dYc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -52,7 +52,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="58"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6Zh-Uq-aEj" id="eRn-v5-sfH">
-                                            <frame key="frameInset" width="375" height="57.5"/>
+                                            <frame key="frameInset" width="375" height="57"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6KD-ur-5Xa">
@@ -79,8 +79,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="WVN-YN-wcN"/>
                     <connections>
-                        <outlet property="memeListDetail" destination="PeJ-jB-JrL" id="egy-W2-CfO"/>
-                        <outlet property="memeListTitle" destination="6KD-ur-5Xa" id="7qo-hy-s1h"/>
+                        <outlet property="memeListDetail" destination="PeJ-jB-JrL" id="dew-a9-sLm"/>
+                        <outlet property="memeListTitle" destination="6KD-ur-5Xa" id="ZsT-L6-iAY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vsf-Fs-fz5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -148,9 +148,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="eFO-vX-evk"/>
                     <connections>
-                        <outlet property="bottomLabel" destination="vZ6-c6-hxc" id="858-zw-SY5"/>
-                        <outlet property="collectionImageView" destination="kit-O9-NoX" id="iby-b7-7Ee"/>
-                        <outlet property="topLabel" destination="x35-G3-dDm" id="LRg-8H-j43"/>
+                        <outlet property="bottomLabelCollection" destination="vZ6-c6-hxc" id="sFU-Gx-p46"/>
+                        <outlet property="collectionImageView" destination="kit-O9-NoX" id="vcd-Q5-Xtr"/>
+                        <outlet property="topLabelCollection" destination="x35-G3-dDm" id="9Qt-Do-Ol4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sm9-ka-du7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -199,7 +199,7 @@
                                     </barButtonItem>
                                     <barButtonItem style="plain" id="hTs-s6-hIA">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="JWa-6d-g3N">
-                                            <rect key="frame" x="93" y="9.5" width="83" height="25"/>
+                                            <rect key="frame" x="93" y="10" width="83" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" image="camera"/>
                                             <connections>
@@ -301,7 +301,7 @@
             <objects>
                 <navigationController id="Le2-O7-pDM" userLabel="Meme List" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="bxf-oN-d8h"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="dA6-n1-41c">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dA6-n1-41c">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

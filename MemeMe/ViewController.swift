@@ -9,13 +9,7 @@
 import UIKit
 
 
-struct Meme
-{
-    var topText : String = ""
-    var bottomText : String = ""
-    let image : UIImage?
-    let memedImage : UIImage?
-}
+
 
 class ViewController: UIViewController , UIImagePickerControllerDelegate,
 UINavigationControllerDelegate ,UITextFieldDelegate

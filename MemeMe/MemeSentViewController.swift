@@ -15,7 +15,7 @@ class MemeSentViewController : UIViewController, UITableViewDataSource, UITableV
     
     @IBOutlet weak var memeListDetail: UILabel!
     
-    var memes2 : [Meme]!
+    
     
     var memes: [Meme] {
         return (UIApplication.shared.delegate as! AppDelegate).memes
