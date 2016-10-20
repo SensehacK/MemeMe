@@ -11,11 +11,7 @@ import  UIKit
 
 class MemeSentViewController : UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    @IBOutlet weak var memeListTitle: UILabel!
-    
-    @IBOutlet weak var memeListDetail: UILabel!
-    
-    
+   
     
     var memes: [Meme] {
         return (UIApplication.shared.delegate as! AppDelegate).memes
@@ -33,7 +29,7 @@ class MemeSentViewController : UIViewController, UITableViewDataSource, UITableV
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MemeCell")!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MemeListCell" , for : indexPath) as! SentMemeListViewController
         let meme = self.memes[indexPath.row]
         
         // Set the name and image

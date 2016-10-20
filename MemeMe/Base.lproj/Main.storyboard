@@ -48,7 +48,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MemeCell" rowHeight="58" id="6Zh-Uq-aEj">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MemeListCell" rowHeight="58" id="6Zh-Uq-aEj" customClass="SentMemeListViewController" customModule="MemeMe" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="58"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6Zh-Uq-aEj" id="eRn-v5-sfH">
@@ -71,17 +71,21 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="memeListDetail" destination="PeJ-jB-JrL" id="YAR-Ug-BKg"/>
+                                            <outlet property="memeListTitle" destination="6KD-ur-5Xa" id="C4T-UE-PAV"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="IIa-Iq-tfN" id="REV-ct-Rl0"/>
+                                    <outlet property="delegate" destination="IIa-Iq-tfN" id="7od-Ku-d0z"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="WVN-YN-wcN"/>
-                    <connections>
-                        <outlet property="memeListDetail" destination="PeJ-jB-JrL" id="dew-a9-sLm"/>
-                        <outlet property="memeListTitle" destination="6KD-ur-5Xa" id="ZsT-L6-iAY"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vsf-Fs-fz5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -110,7 +114,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CustomMemeCell" id="4H8-qa-ZZS">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionMemeCellIdentifier" id="4H8-qa-ZZS" customClass="SentMemeCollectionViewController" customModule="MemeMe" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="98" height="99"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -140,18 +144,22 @@
                                             <constraint firstItem="vZ6-c6-hxc" firstAttribute="leading" secondItem="4H8-qa-ZZS" secondAttribute="leading" constant="28" id="vU9-b6-TJx"/>
                                             <constraint firstItem="kit-O9-NoX" firstAttribute="centerX" secondItem="vZ6-c6-hxc" secondAttribute="centerX" id="zaK-hh-OSr"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="bottomLabelCollection" destination="vZ6-c6-hxc" id="K2x-7N-l7e"/>
+                                            <outlet property="collectionImageView" destination="kit-O9-NoX" id="4Gk-Zj-G6B"/>
+                                            <outlet property="topLabelCollection" destination="x35-G3-dDm" id="v4f-Gg-fIY"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="F6g-0v-5zN" id="kfu-dW-V4l"/>
+                                    <outlet property="delegate" destination="F6g-0v-5zN" id="S6R-Tq-XtM"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="eFO-vX-evk"/>
-                    <connections>
-                        <outlet property="bottomLabelCollection" destination="vZ6-c6-hxc" id="sFU-Gx-p46"/>
-                        <outlet property="collectionImageView" destination="kit-O9-NoX" id="vcd-Q5-Xtr"/>
-                        <outlet property="topLabelCollection" destination="x35-G3-dDm" id="9Qt-Do-Ol4"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sm9-ka-du7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
