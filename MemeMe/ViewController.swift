@@ -37,6 +37,10 @@ UINavigationControllerDelegate ,UITextFieldDelegate
     var bottomText2 : Bool = false
     var memedImage : UIImage?
     
+    var memesArr : Meme!
+    
+    
+    
     //Meme attributes assigned
     let memeTextAttributes = [
         NSStrokeColorAttributeName :  UIColor.black , //TODO: Fill in appropriate UIColor,
@@ -192,6 +196,8 @@ UINavigationControllerDelegate ,UITextFieldDelegate
         let meme = Meme( topText: topText.text!, bottomText : bottomText.text! ,image:
             imagePickedView.image, memedImage: memedImage)
         
+        
+        //Storing it in App Delegate File for easy Access
         let object = UIApplication.shared.delegate
         let appDelegate = object as! AppDelegate
         appDelegate.memes.append(meme)

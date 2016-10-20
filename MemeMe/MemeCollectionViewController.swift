@@ -11,8 +11,11 @@ import  UIKit
 
 class MemeCollectionViewController : UICollectionViewController {
     
+    @IBOutlet weak var topLabel: UILabel!
     
+    @IBOutlet weak var bottomLabel: UILabel!
     
+    @IBOutlet weak var collectionImageView: UIImageView!
     var memes2 : [Meme]!
     
     var memes: [Meme] {
@@ -31,16 +34,27 @@ class MemeCollectionViewController : UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CustomMemeCell", for: indexPath)as! CustomMemeCell
-        let meme = memes[indexPath.item]
-        cell.setText(meme.top, bottomString: meme.bottom)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CustomMemeCell", for: indexPath)as! MemeCollectionViewController
         
-        let imageView = UIImageView(image: meme.image)
-        cell.backgroundView = imageView
+        
+        let meme = memes[indexPath.item]
+        
+        
+        //cell.setText(meme.top, bottomString: meme.bottom)
+        
+        
+        cell.topLabel.text = meme.topText
+        cell.bottomLabel.text = meme.bottomText
+        
+        cell.collectionImageView?.image = meme.memedImage
+        
         return cell
         
         
     }
+    
+    
+    
     
     
     
