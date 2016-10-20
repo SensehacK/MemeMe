@@ -36,12 +36,7 @@ UINavigationControllerDelegate ,UITextFieldDelegate
     
     
     //Meme attributes assigned
-    let memeTextAttributes = [
-        NSStrokeColorAttributeName :  UIColor.black , //TODO: Fill in appropriate UIColor,
-        NSForegroundColorAttributeName : UIColor.white , //TODO: Fill in UIColor,
-        NSFontAttributeName : UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
-        NSStrokeWidthAttributeName : -3.0 //TODO: Fill in appropriate Float
-    ] as [String : Any]
+    
     
 
     override func viewDidLoad()
@@ -51,6 +46,15 @@ UINavigationControllerDelegate ,UITextFieldDelegate
         // Do any additional setup after loading the view, typically from a nib.
         //Camera icon & Gallery Icon imported from icons8.com <a href="https://icons8.com">Icon pack by Icons8</a>
         cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) // Simulator doesnt have Camera access , so checking if the end device has camera hardware or not.
+        
+        
+        let memeTextAttributes = [
+            NSStrokeColorAttributeName :  UIColor.black , //TODO: Fill in appropriate UIColor,
+            NSForegroundColorAttributeName : UIColor.white , //TODO: Fill in UIColor,
+            NSFontAttributeName : UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
+            NSStrokeWidthAttributeName : -3.0 //TODO: Fill in appropriate Float
+            ] as [String : Any]
+        
         
         shareButton.isEnabled = false  //disable the share button
         //default attributes assigned
