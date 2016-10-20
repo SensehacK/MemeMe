@@ -52,7 +52,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="58"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6Zh-Uq-aEj" id="eRn-v5-sfH">
-                                            <frame key="frameInset" width="375" height="57.5"/>
+                                            <frame key="frameInset" width="375" height="57"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6KD-ur-5Xa">
@@ -85,7 +85,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="WVN-YN-wcN"/>
+                    <navigationItem key="navigationItem" id="WVN-YN-wcN">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="8hV-SX-J3A">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="show" id="PMV-0g-k3X"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vsf-Fs-fz5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -95,7 +101,7 @@
         <scene sceneID="tJk-aF-pLR">
             <objects>
                 <collectionViewController id="KpA-q8-8S2" customClass="MemeCollectionViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="gow-Iy-kPC">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="gow-Iy-kPC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -151,7 +157,13 @@
                             <outlet property="delegate" destination="KpA-q8-8S2" id="hsq-JP-0W8"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="dU9-nH-rpS"/>
+                    <navigationItem key="navigationItem" id="dU9-nH-rpS">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="bW3-U1-jeL">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="show" id="Xf6-Ba-ULh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TVn-cI-HKr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -309,4 +321,7 @@
             <point key="canvasLocation" x="-507" y="-177"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="PMV-0g-k3X"/>
+    </inferredMetricsTieBreakers>
 </document>
