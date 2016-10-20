@@ -17,13 +17,14 @@ UINavigationControllerDelegate ,UITextFieldDelegate
 {
     //outlet connections
     @IBOutlet weak var imagePickedView: UIImageView!
-    @IBOutlet weak var cameraButton: UIButton!
+   // @IBOutlet weak var cameraButton: UIButton!
     @IBOutlet weak var topText: UITextField!
     @IBOutlet weak var bottomText: UITextField!
     @IBOutlet weak var shareButton: UIBarButtonItem!
     @IBOutlet weak var toolbar: UIToolbar!
     @IBOutlet weak var navigationBar: UINavigationBar!
     @IBOutlet weak var cancelButton: UIBarButtonItem!
+    @IBOutlet weak var cameraSystemButton: UIBarButtonItem!
     
     //variable declaration
     var topTextEdit : Bool = false
@@ -45,7 +46,7 @@ UINavigationControllerDelegate ,UITextFieldDelegate
         
         // Do any additional setup after loading the view, typically from a nib.
         //Camera icon & Gallery Icon imported from icons8.com <a href="https://icons8.com">Icon pack by Icons8</a>
-        cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) // Simulator doesnt have Camera access , so checking if the end device has camera hardware or not.
+        cameraSystemButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) // Simulator doesnt have Camera access , so checking if the end device has camera hardware or not.
         
         
         let memeTextAttributes = [
