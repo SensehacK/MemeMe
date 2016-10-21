@@ -26,8 +26,9 @@ class MemeDetailViewController: UIViewController {
     // MARK: Life Cycle
     
     override func viewWillAppear(_ animated: Bool) {
-        
         super.viewWillAppear(animated)
+        //Set the Content Mode to Aspect Fit in Code & Storyboard GUI too.
+        memeDetailImageView.contentMode = .scaleAspectFit
         tabBarController?.tabBar.isHidden = true
         memeDetailTitleLabel.text = memeDetail.topText
         memeDetailImageView.image = memeDetail.memedImage
