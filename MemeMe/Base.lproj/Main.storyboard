@@ -52,7 +52,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="58"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6Zh-Uq-aEj" id="eRn-v5-sfH">
-                                            <frame key="frameInset" width="375" height="57.5"/>
+                                            <frame key="frameInset" width="375" height="57"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6KD-ur-5Xa">
@@ -85,7 +85,7 @@
                     <navigationItem key="navigationItem" id="WVN-YN-wcN">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="8hV-SX-J3A">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" id="PMV-0g-k3X"/>
+                                <segue destination="BYZ-38-t0r" kind="presentation" id="PMV-0g-k3X"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -198,7 +198,7 @@
                     <navigationItem key="navigationItem" id="dU9-nH-rpS">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="bW3-U1-jeL">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" id="qNS-Sd-J2I"/>
+                                <segue destination="BYZ-38-t0r" kind="presentation" id="qNS-Sd-J2I"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -368,6 +368,6 @@
         <image name="table" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="PMV-0g-k3X"/>
+        <segue reference="qNS-Sd-J2I"/>
     </inferredMetricsTieBreakers>
 </document>

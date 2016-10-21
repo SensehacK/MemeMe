@@ -31,7 +31,7 @@ UINavigationControllerDelegate ,UITextFieldDelegate
     var bottomTextEdit : Bool = false
     var bottomText2 : Bool = false
     var memedImage : UIImage?
-    
+    var genimage : UIImage?
     var memesArr : Meme!
     
     
@@ -117,6 +117,7 @@ UINavigationControllerDelegate ,UITextFieldDelegate
     {
         //Get Image with Both Texts as a MemeImage
         let image = generateMemedImage()
+        genimage = image
         let activity = UIActivityViewController(activityItems: [image], applicationActivities: nil)
         present(activity, animated: true, completion: nil)
         
@@ -194,7 +195,7 @@ UINavigationControllerDelegate ,UITextFieldDelegate
     {
         //Create the meme
         let meme = Meme( topText: topText.text!, bottomText : bottomText.text! ,image:
-            imagePickedView.image, memedImage: memedImage)
+            imagePickedView.image, memedImage: genimage)
         
         
         //Storing it in App Delegate File for easy Access
@@ -276,6 +277,7 @@ UINavigationControllerDelegate ,UITextFieldDelegate
     
     @IBAction func cancelPressed(_ sender: AnyObject) {
         performSegue(withIdentifier: "Return", sender: self)
+        dismiss(animated: true, completion: nil)
     }
     
     
