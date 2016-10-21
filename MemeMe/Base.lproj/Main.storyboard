@@ -111,7 +111,7 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="C1C-Dr-eOa"/>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQL-Kb-Cjy">
-                                <frame key="frameInset" minX="81" minY="97" width="212" height="21"/>
+                                <frame key="frameInset" minX="81" minY="56" width="212" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -121,9 +121,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="C1C-Dr-eOa" firstAttribute="leading" secondItem="7MK-Hx-fkA" secondAttribute="leadingMargin" constant="10" id="5vh-6f-cUj"/>
-                            <constraint firstItem="Drp-da-9z0" firstAttribute="top" secondItem="C1C-Dr-eOa" secondAttribute="bottom" constant="149" id="Rqy-FN-2PJ"/>
+                            <constraint firstItem="Drp-da-9z0" firstAttribute="top" secondItem="C1C-Dr-eOa" secondAttribute="bottom" constant="67" id="Rqy-FN-2PJ"/>
                             <constraint firstItem="C1C-Dr-eOa" firstAttribute="centerX" secondItem="7MK-Hx-fkA" secondAttribute="centerX" id="TuD-yK-T3E"/>
-                            <constraint firstItem="C1C-Dr-eOa" firstAttribute="top" secondItem="9Pl-5j-FMv" secondAttribute="bottom" constant="126" id="mr2-py-sgP"/>
+                            <constraint firstItem="C1C-Dr-eOa" firstAttribute="top" secondItem="9Pl-5j-FMv" secondAttribute="bottom" constant="75" id="mr2-py-sgP"/>
                         </constraints>
                     </view>
                     <connections>
@@ -133,7 +133,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="otf-YI-MbS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1341.5999999999999" y="238.83058470764618"/>
+            <point key="canvasLocation" x="1996" y="239.73013493253376"/>
         </scene>
         <!--Meme Collection View Controller-->
         <scene sceneID="tJk-aF-pLR">
@@ -225,10 +225,10 @@
             </objects>
             <point key="canvasLocation" x="-1438" y="185"/>
         </scene>
-        <!--View Controller-->
+        <!--Edit Meme View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="MemeViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MemeViewController" id="BYZ-38-t0r" customClass="EditMemeViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -251,7 +251,6 @@
                                         <barButtonItem key="rightBarButtonItem" title="Cancel" id="5td-I4-RQS">
                                             <connections>
                                                 <action selector="cancelPressed:" destination="BYZ-38-t0r" id="rNk-F9-1Zk"/>
-                                                <segue destination="1py-Q9-FWA" kind="show" identifier="Return" id="pO3-yc-F20"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -343,7 +342,7 @@
                     </items>
                 </navigationBar>
             </objects>
-            <point key="canvasLocation" x="2609" y="24"/>
+            <point key="canvasLocation" x="1185" y="240"/>
         </scene>
         <!--Meme List-->
         <scene sceneID="8Zz-a5-Q09">

@@ -46,7 +46,15 @@ class MemeSentViewController : UIViewController , UITableViewDelegate,UITableVie
         return cell
     }
     
+    //Recommendation by the Udacity Reviewer.
+     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
     
+     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
+    {
+        
+    }
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

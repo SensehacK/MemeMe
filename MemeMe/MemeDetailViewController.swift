@@ -11,11 +11,7 @@ import UIKit
 
 class MemeDetailViewController: UIViewController {
     
-    
-    
     // MARK: Outlets
-    
-    
     @IBOutlet weak var memeDetailImageView: UIImageView!
     
     @IBOutlet weak var memeDetailTitleLabel: UILabel!
@@ -27,30 +23,19 @@ class MemeDetailViewController: UIViewController {
         return (UIApplication.shared.delegate as! AppDelegate).memes
     }
     
-    
-    
     // MARK: Life Cycle
     
     override func viewWillAppear(_ animated: Bool) {
         
         super.viewWillAppear(animated)
-        
-        self.tabBarController?.tabBar.isHidden = true
-        
-        self.memeDetailTitleLabel.text = memeDetail.topText
-        
-        
-        self.memeDetailImageView.image = memeDetail.memedImage
-        
-        
+        tabBarController?.tabBar.isHidden = true
+        memeDetailTitleLabel.text = memeDetail.topText
+        memeDetailImageView.image = memeDetail.memedImage
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.tabBarController?.tabBar.isHidden = false
+        tabBarController?.tabBar.isHidden = false
     }
- 
- 
- 
-    
+
 }

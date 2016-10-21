@@ -11,7 +11,7 @@ import UIKit
 
 
 
-class ViewController: UIViewController , UIImagePickerControllerDelegate,
+class EditMemeViewController: UIViewController , UIImagePickerControllerDelegate,
 UINavigationControllerDelegate ,UITextFieldDelegate
 
 {
@@ -86,12 +86,18 @@ UINavigationControllerDelegate ,UITextFieldDelegate
         unsubscribeFromKeyboardNotifications()
     }
     
-    @IBAction func pickImage(_ sender: AnyObject)
-    {
+    
+    func pick(source:UIImagePickerControllerSourceType){
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
-        imagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary
+        imagePicker.sourceType = source
         present(imagePicker, animated: true, completion: nil)
+    }
+    
+    
+    @IBAction func pickImage(_ sender: AnyObject)
+    {
+        pick( source: .photoLibrary)
         //enable the share button
         shareButton.isEnabled = true
         //extra alignment
@@ -101,16 +107,7 @@ UINavigationControllerDelegate ,UITextFieldDelegate
     
     @IBAction func pickImageCamera(_ sender: AnyObject)
     {
-        let imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
-        //self.present(imagePicker, animated: true, completion : nil)
-        imagePicker.sourceType = UIImagePickerControllerSourceType.camera
-        present(imagePicker, animated: true, completion: nil)
-    }
-    
-    @IBAction func cancelImage(_ sender: AnyObject)
-    {
-        dismiss(animated: true, completion: nil)
+        pick(source: .camera)
     }
     
     @IBAction func shareActivity(_ sender: AnyObject)
@@ -276,7 +273,7 @@ UINavigationControllerDelegate ,UITextFieldDelegate
     
     
     @IBAction func cancelPressed(_ sender: AnyObject) {
-        performSegue(withIdentifier: "Return", sender: self)
+        
         dismiss(animated: true, completion: nil)
     }
     
