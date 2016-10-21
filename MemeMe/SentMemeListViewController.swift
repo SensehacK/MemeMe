@@ -14,7 +14,7 @@ class SentMemeListViewController : UITableViewCell {
     
     @IBOutlet weak var memeListTitle: UILabel!
     
-    @IBOutlet weak var memeListDetail: UILabel!
+    @IBOutlet weak var memeListImage: UIImageView!
     
     
     

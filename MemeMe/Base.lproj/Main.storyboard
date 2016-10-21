@@ -11,7 +11,7 @@
         <scene sceneID="O3R-qa-0EA">
             <objects>
                 <navigationController id="90X-q9-60f" userLabel="Meme Collection" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Meme Collection" id="wxa-Bf-h8V"/>
+                    <tabBarItem key="tabBarItem" title="Meme Collection" image="collection" id="wxa-Bf-h8V"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="HSx-WJ-dYc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -52,27 +52,24 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="58"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6Zh-Uq-aEj" id="eRn-v5-sfH">
-                                            <frame key="frameInset" width="375" height="57"/>
+                                            <frame key="frameInset" width="375" height="57.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6KD-ur-5Xa">
-                                                    <frame key="frameInset" minX="42" width="34" height="21"/>
+                                                    <frame key="frameInset" minX="162" width="152" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PeJ-jB-JrL">
-                                                    <frame key="frameInset" minX="42" minY="29" width="44" height="21"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4aS-6G-7My">
+                                                    <frame key="frameInset" minX="21" width="120" height="58"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="memeListDetail" destination="PeJ-jB-JrL" id="YAR-Ug-BKg"/>
+                                            <outlet property="memeListImage" destination="4aS-6G-7My" id="5xT-tI-NEs"/>
                                             <outlet property="memeListTitle" destination="6KD-ur-5Xa" id="C4T-UE-PAV"/>
                                         </connections>
                                     </tableViewCell>
@@ -98,7 +95,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vsf-Fs-fz5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="306" y="-178"/>
+            <point key="canvasLocation" x="304.80000000000001" y="-178.56071964017991"/>
         </scene>
         <!--Meme Detail View Controller-->
         <scene sceneID="aXj-bv-Ksq">
@@ -113,8 +110,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="C1C-Dr-eOa"/>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQL-Kb-Cjy">
-                                <frame key="frameInset" minX="166" minY="52" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQL-Kb-Cjy">
+                                <frame key="frameInset" minX="81" minY="97" width="212" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -124,9 +121,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="C1C-Dr-eOa" firstAttribute="leading" secondItem="7MK-Hx-fkA" secondAttribute="leadingMargin" constant="10" id="5vh-6f-cUj"/>
-                            <constraint firstItem="Drp-da-9z0" firstAttribute="top" secondItem="C1C-Dr-eOa" secondAttribute="bottom" constant="68" id="Rqy-FN-2PJ"/>
+                            <constraint firstItem="Drp-da-9z0" firstAttribute="top" secondItem="C1C-Dr-eOa" secondAttribute="bottom" constant="149" id="Rqy-FN-2PJ"/>
                             <constraint firstItem="C1C-Dr-eOa" firstAttribute="centerX" secondItem="7MK-Hx-fkA" secondAttribute="centerX" id="TuD-yK-T3E"/>
-                            <constraint firstItem="C1C-Dr-eOa" firstAttribute="top" secondItem="9Pl-5j-FMv" secondAttribute="bottom" constant="61" id="mr2-py-sgP"/>
+                            <constraint firstItem="C1C-Dr-eOa" firstAttribute="top" secondItem="9Pl-5j-FMv" secondAttribute="bottom" constant="126" id="mr2-py-sgP"/>
                         </constraints>
                     </view>
                     <connections>
@@ -352,7 +349,7 @@
         <scene sceneID="8Zz-a5-Q09">
             <objects>
                 <navigationController id="Le2-O7-pDM" userLabel="Meme List" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Meme List" id="bxf-oN-d8h"/>
+                    <tabBarItem key="tabBarItem" title="Meme List" image="table" id="bxf-oN-d8h"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dA6-n1-41c">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -366,6 +363,10 @@
             <point key="canvasLocation" x="-507" y="-177"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="collection" width="30" height="30"/>
+        <image name="table" width="30" height="30"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="PMV-0g-k3X"/>
     </inferredMetricsTieBreakers>

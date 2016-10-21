@@ -42,7 +42,7 @@ class MemeSentViewController : UIViewController , UITableViewDelegate,UITableVie
         
         // Set the name and image
         cell.memeListTitle.text = meme.topText
-        cell.memeListDetail.text = meme.bottomText
+        cell.memeListImage.image = meme.memedImage
         return cell
     }
     
