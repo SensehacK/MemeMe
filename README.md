@@ -1,6 +1,7 @@
 # MemeMe-1
 
 Working on MemeMe 2.0
+Update 21st Oct : Met Specifications for Udacity Meme Me 2.0 Passed.
 
 updated: Oct 21st
 
